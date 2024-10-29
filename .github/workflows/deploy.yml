@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   build-and-push:
@@ -24,7 +25,7 @@ jobs:
         context: .
         file: ./docker/Dockerfile.user
         push: true
-        tags: piyushnoob/week-18-ci-cd  # Replace with your Docker Hub username and repository
+        tags: piyushnoob/week-18-ci-cd  
 
     - name: Verify Pushed Image
-      run: docker pull piyushnoob/week-18-ci-cd  # Replace with your Docker Hub username and repository
+      run: docker pull piyushnoob/week-18-ci-cd  
