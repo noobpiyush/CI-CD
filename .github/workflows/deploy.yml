@@ -30,7 +30,7 @@ jobs:
     - name: Verify Pushed Image
       run: docker pull piyushnoob/week-18-ci-cd  
     
-    - name: Deploy to EC2
+    - name: Deploy to Azure VM
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
